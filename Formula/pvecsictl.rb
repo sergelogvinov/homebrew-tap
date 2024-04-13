@@ -5,40 +5,40 @@
 class Pvecsictl < Formula
   desc "Proxmox VE CSI Mutate tool"
   homepage "https://github.com/sergelogvinov/proxmox-csi-plugin"
-  version "0.5.0"
+  version "0.6.1"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v0.5.0/pvecsictl-darwin-arm64"
-      sha256 "87d778f053b288cc11a0cba3ab795f0d3ff78dcf1feae702d507f8543f86865a"
-
-      def install
-        bin.install "pvecsictl-darwin-arm64" => "pvecsictl"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v0.5.0/pvecsictl-darwin-amd64"
-      sha256 "06e8ade4770f963a446fab4be969da072c7b18808fd1ebcba4dbcfe350596c09"
+      url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v0.6.1/pvecsictl-darwin-amd64"
+      sha256 "290a8567b16f5bd31377dba2d4fa6c6be6ee94344eaa7cadde7c981cab4a1b59"
 
       def install
         bin.install "pvecsictl-darwin-amd64" => "pvecsictl"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v0.6.1/pvecsictl-darwin-arm64"
+      sha256 "7b0916934d907f53ecc769ed1de74e96197520fc7dd4deb2c27337568b2a98b0"
+
+      def install
+        bin.install "pvecsictl-darwin-arm64" => "pvecsictl"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v0.5.0/pvecsictl-linux-amd64"
-      sha256 "419eb789d8cc46fc8d790633ffc9e298fd946c7ee0dfe8c027c8dd1f526286ba"
+      url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v0.6.1/pvecsictl-linux-amd64"
+      sha256 "45b546c953cb773fffb3d62669a843b8f506c590dc023f25131b674c1db1ce12"
 
       def install
         bin.install "pvecsictl-linux-amd64" => "pvecsictl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v0.5.0/pvecsictl-linux-arm64"
-      sha256 "cbc6765da682f1388b0e996a77c3bf7df0720df140deba90d5123c2ad305cc75"
+      url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v0.6.1/pvecsictl-linux-arm64"
+      sha256 "8ebcd96bb83b2bbf1876408e9ad937ddcb7fff9830e74d7fca490b56f51e5901"
 
       def install
         bin.install "pvecsictl-linux-arm64" => "pvecsictl"
