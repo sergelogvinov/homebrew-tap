@@ -41,7 +41,7 @@ cask "pvecsictl" do
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/pvecsictl"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/pvecsictl-#{os}-#{arch}"]
     end
   end
 
