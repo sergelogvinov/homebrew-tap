@@ -7,7 +7,7 @@ cask "pvecsictl" do
   name "pvecsictl"
   desc "Proxmox VE CSI Mutate tool"
   homepage "https://github.com/sergelogvinov/proxmox-csi-plugin"
-  version "0.17.1"
+  version "0.18.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,12 +16,12 @@ cask "pvecsictl" do
   on_macos do
     on_intel do
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-darwin-amd64"
-      sha256 "effda674cf58063dec00639436dc0e359af071da78982faa8688de43d84fef8b"
+      sha256 "1bc46af5ae36bd7268000b7ece3795fd5110b8fa6226fafb49a32ca20e054935"
       binary "pvecsictl-darwin-amd64", target: "pvecsictl-darwin-amd64"
     end
     on_arm do
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-darwin-arm64"
-      sha256 "fd01b051e3b9feeafeaad9893e9cc602746c6aa5716a94dbb3e51fc0e6961e32"
+      sha256 "5d482f485ae625cc4675f3dadf3cccd119288b4fb9e7740f48aa62c3e2145978"
       binary "pvecsictl-darwin-arm64", target: "pvecsictl-darwin-arm64"
     end
   end
@@ -29,12 +29,12 @@ cask "pvecsictl" do
   on_linux do
     on_intel do
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-linux-amd64"
-      sha256 "0e758dd14ab9bce6eddcf68a42f552e20802fec91acbdce1ad6831b61e73f055"
+      sha256 "52883000cd49441a5d25007542dbbaf5def057c71cb1c40bc0ea5907e74f7d72"
       binary "pvecsictl-linux-amd64", target: "pvecsictl-linux-amd64"
     end
     on_arm do
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-linux-arm64"
-      sha256 "4cbed6c5c20f11d800fd18d3031c78240762e843a969eebaab95930aa41d9405"
+      sha256 "c2360f68bbd64e9e1a9232b1c38b1e1b1c94e6cd41ea71d7fce6d12166174df5"
       binary "pvecsictl-linux-arm64", target: "pvecsictl-linux-arm64"
     end
   end
