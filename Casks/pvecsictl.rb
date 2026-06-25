@@ -4,39 +4,40 @@ cask "pvecsictl" do
   os macos: "darwin", linux: "linux"
   binary "pvecsictl-#{os}-#{arch}", target: "pvecsictl"
 
-  name "pvecsictl"
-  desc "Proxmox VE CSI Mutate tool"
-  homepage "https://github.com/sergelogvinov/proxmox-csi-plugin"
-  version "0.18.1"
-
-  livecheck do
-    skip "Auto-generated on release."
-  end
+  version "0.19.1"
 
   on_macos do
     on_intel do
+      sha256 "7ae71daa9c21a6f0d253a5c787abef5b3f0330ae55dda681b9b5d6becb78e5ac"
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-darwin-amd64"
-      sha256 "789b0d92252c03c83e4a93e651c7fa0cbd7e79476344f3b13dd8073d88d2f078"
       binary "pvecsictl-darwin-amd64", target: "pvecsictl-darwin-amd64"
     end
     on_arm do
+      sha256 "3480acf281e5157c8b7cdd492a5af9096e7845d2f5da0475923de48abb5544ca"
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-darwin-arm64"
-      sha256 "ced78e1aac1e0cdce85d1412fad3bc4e9e219689abb24a0c38b861385949e8e3"
       binary "pvecsictl-darwin-arm64", target: "pvecsictl-darwin-arm64"
     end
   end
 
   on_linux do
     on_intel do
+      sha256 "00048c77656e7481acfc5b190e374651ade71e905aeb3f214282b9da4bdcf709"
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-linux-amd64"
-      sha256 "960212018baf0d2016ae1b1f34248657cba46f96776746ffe595ac87dd8f9193"
       binary "pvecsictl-linux-amd64", target: "pvecsictl-linux-amd64"
     end
     on_arm do
+      sha256 "5ff14fe778a6ebc39a40cac1f864d1095515e302d5b41009075e8306b3646c72"
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-linux-arm64"
-      sha256 "0fb09c3b19fdf1ef15326e8f34946d97ceeadf9a41cd2066c5ff905e6de9cdcf"
       binary "pvecsictl-linux-arm64", target: "pvecsictl-linux-arm64"
     end
+  end
+
+  name "pvecsictl"
+  desc "Proxmox VE CSI Mutate tool"
+  homepage "https://github.com/sergelogvinov/proxmox-csi-plugin"
+
+  livecheck do
+    skip "Auto-generated on release."
   end
 
   postflight do
@@ -46,4 +47,5 @@ cask "pvecsictl" do
   end
 
   # No zap stanza required
+
 end
