@@ -42,7 +42,9 @@ cask "mimiops-mcp" do
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/mimiops-mcp"]
+      arch arm: "arm64", intel: "amd64"
+      os macos: "darwin", linux: "linux"
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mimiops-mcp_#{os}_#{arch}"]
     end
   end
 
