@@ -8,22 +8,22 @@ cask "mimiops-mcp" do
 
   on_macos do
     on_intel do
-      sha256 "38a442e59ec9186faf932544b81f4edc2ff5c9914d87b94c27de4dcf7379ab1d"
+      sha256 "721cc0949f04d8b727780aafca600a4dacc5ee5e928f66f3f19a2fab754af659"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "5d54c5efd93b297faeaebd1920b9bce20593d1e12dfba906e3e425ed89117dbb"
+      sha256 "29c2bd9df7ac27fd4b7afae26d2456f6d228156418e3673692af00d3e798aed9"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "6a39aea5b75ce9e8e11715d5061aec429ea1809fdb980cc16c240c8cacf12a9a"
+      sha256 "04859efc6a24407ff28ece22477c04315277ed2b1232013edd6a1069166e9163"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "2fa5f4259ac68d34afdeeadc80527083f726b2e21894b2915778b2a6ba46dacd"
+      sha256 "d6c0d15cf0aedde45c8e9ca858fae662c078827e2f830829059bb442a1dc854f"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_arm64.tar.gz"
     end
   end
@@ -40,7 +40,7 @@ cask "mimiops-mcp" do
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mimiops-mcp_darwin_#{arch}"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mimiops-mcp"]
     end
   end
 
