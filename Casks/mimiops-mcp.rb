@@ -8,27 +8,23 @@ cask "mimiops-mcp" do
 
   on_macos do
     on_intel do
-      sha256 "4e0aace975dfbe789ca5310928ab335759f2106861558945982de5f655fe6778"
-      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_amd64"
-      binary "mimiops-mcp_darwin_amd64", target: "bin/mimiops-mcp"
+      sha256 "35ae4678b28742fb096fd81d69e5f19f6a71fe685e501eb99b99102efa509faf"
+      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "727ae703f514093cd31db25fb4a61e3edb20e7ee1aa975dbbcba76bea1776e3e"
-      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_arm64"
-      binary "mimiops-mcp_darwin_arm64", target: "bin/mimiops-mcp"
+      sha256 "e769185fba9b1ff6d5b2a7e88e8971d18ee88273c980033b4aa541568c9f8018"
+      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "92dbbe9b3330bfb03b86e74ebf49573d60ec886b54d477e05ce483551af4f61b"
-      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_amd64"
-      binary "mimiops-mcp_linux_amd64", target: "bin/mimiops-mcp"
+      sha256 "37aa8b63109e23cd633daef5be79dd93cdc9119ce5721e16937f44aa0b5d1318"
+      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "f4218bbc58b44bda8c7ecbc2b3596698025e5f56bc451a88c245c64879a1d7ce"
-      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_arm64"
-      binary "mimiops-mcp_linux_arm64", target: "bin/mimiops-mcp"
+      sha256 "0e075966be338e612f880782859f0a5921c1e5dd3d49e46dfbe5f2e8a5a84c23"
+      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_arm64.tar.gz"
     end
   end
 
@@ -40,9 +36,10 @@ cask "mimiops-mcp" do
     skip "Auto-generated on release."
   end
 
+  binary "mimiops-mcp"
+
   postflight do
     if OS.mac?
-      system_command "/bin/ls", args: ["-la", "#{staged_path}/"]
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mimiops-mcp_darwin_#{arch}"]
     end
   end
