@@ -8,12 +8,12 @@ cask "mimiops-mcp" do
 
   on_macos do
     on_intel do
-      sha256 "514d739afb91d23d348e4b3e3f0d85e7c931aa72f762f5ef4a76d309825dcfc8"
+      sha256 "4e0aace975dfbe789ca5310928ab335759f2106861558945982de5f655fe6778"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_amd64"
       binary "mimiops-mcp_darwin_amd64", target: "bin/mimiops-mcp"
     end
     on_arm do
-      sha256 "203ea4c74fccaadd50312d2c7168ce89ce0b4e9d3bfe863ffcd486ccd14cbfc0"
+      sha256 "727ae703f514093cd31db25fb4a61e3edb20e7ee1aa975dbbcba76bea1776e3e"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_arm64"
       binary "mimiops-mcp_darwin_arm64", target: "bin/mimiops-mcp"
     end
@@ -21,12 +21,12 @@ cask "mimiops-mcp" do
 
   on_linux do
     on_intel do
-      sha256 "0ed4be24a38ceb86d641634d20d317c4de4b1a15bae0cd56c4040d6fad0ddf30"
+      sha256 "92dbbe9b3330bfb03b86e74ebf49573d60ec886b54d477e05ce483551af4f61b"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_amd64"
       binary "mimiops-mcp_linux_amd64", target: "bin/mimiops-mcp"
     end
     on_arm do
-      sha256 "76e27e66adb3b90c3e4fb8378c96f965cfe15dd6ea2fd3d009bfe95eae49f886"
+      sha256 "f4218bbc58b44bda8c7ecbc2b3596698025e5f56bc451a88c245c64879a1d7ce"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_arm64"
       binary "mimiops-mcp_linux_arm64", target: "bin/mimiops-mcp"
     end
@@ -38,6 +38,12 @@ cask "mimiops-mcp" do
 
   livecheck do
     skip "Auto-generated on release."
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mimiops-mcp-darwin-#{arch}"]
+    end
   end
 
   # No zap stanza required
