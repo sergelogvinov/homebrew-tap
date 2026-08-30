@@ -4,16 +4,16 @@ cask "mimiops-mcp" do
   os macos: "darwin", linux: "linux"
   binary "mimiops-mcp_#{os}_#{arch}", target: "mimiops-mcp"
 
-  version "0.3.0"
+  version "0.4.0"
 
   on_macos do
     on_intel do
-      sha256 "4c6bf020d36e91e7dad3a437ecddbfbfc61228d04a79be9ec42c037b164cd58a"
+      sha256 "f38ac7323efda2f4353d4cf9ab7b86e3ad0679061fcfadae1555a3118c228875"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_amd64"
       binary "mimiops-mcp_darwin_amd64", target: "bin/mimiops-mcp"
     end
     on_arm do
-      sha256 "8f11510db40b9c0a4ae7150088a3b94dafc3714a09597a333db4b9c31e8abd62"
+      sha256 "9e2ab42a060acb9cd7023bba126cedf8f75126b48893b86ae30f3fc45ba16ed0"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_arm64"
       binary "mimiops-mcp_darwin_arm64", target: "bin/mimiops-mcp"
     end
@@ -21,12 +21,12 @@ cask "mimiops-mcp" do
 
   on_linux do
     on_intel do
-      sha256 "9c7a6c2dd176de639fd1cffa7dc7e3e02b601d2c67f6ee14d9d10ab7edd27c22"
+      sha256 "fdc98249af26932346a77be2217abd22a7705b14fd906718648b986664632454"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_amd64"
       binary "mimiops-mcp_linux_amd64", target: "bin/mimiops-mcp"
     end
     on_arm do
-      sha256 "dac5ba128864148435a1f081144de90f541b3167b3176edff5765c7931a01dde"
+      sha256 "17d0c362d3aad15d56b65e4bb72f715e836095ce82ba8480c3234e9e7c1722ff"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_arm64"
       binary "mimiops-mcp_linux_arm64", target: "bin/mimiops-mcp"
     end
