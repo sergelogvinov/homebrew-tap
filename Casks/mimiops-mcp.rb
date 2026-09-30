@@ -4,31 +4,30 @@ cask "mimiops-mcp" do
   os macos: "darwin", linux: "linux"
   binary "mimiops-mcp_#{os}_#{arch}", target: "mimiops-mcp"
 
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
-    on_intel do
-      sha256 "f38ac7323efda2f4353d4cf9ab7b86e3ad0679061fcfadae1555a3118c228875"
-      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_amd64"
-      binary "mimiops-mcp_darwin_amd64", target: "bin/mimiops-mcp"
-    end
     on_arm do
-      sha256 "9e2ab42a060acb9cd7023bba126cedf8f75126b48893b86ae30f3fc45ba16ed0"
+      sha256 "4d2179f11ff5b105d3a387f8a12d8db14315e48a431dfdc430ef2bf9f044afc9"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_arm64"
-      binary "mimiops-mcp_darwin_arm64", target: "bin/mimiops-mcp"
+      binary "mimiops-mcp_darwin_arm64", target: "mimiops-mcp"
+    end
+    on_intel do
+      sha256 "f6131f49e5be3c293ca0d89c39df04292cf0f08a8fdeb24f1d4404c541de8a99"
+      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_darwin_amd64"
+      binary "mimiops-mcp_darwin_amd64", target: "mimiops-mcp"
     end
   end
-
   on_linux do
-    on_intel do
-      sha256 "fdc98249af26932346a77be2217abd22a7705b14fd906718648b986664632454"
-      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_amd64"
-      binary "mimiops-mcp_linux_amd64", target: "bin/mimiops-mcp"
-    end
     on_arm do
-      sha256 "17d0c362d3aad15d56b65e4bb72f715e836095ce82ba8480c3234e9e7c1722ff"
+      sha256 "4990349155480c79ed4934ac04656cdd4ab263ec13dede3063d8719c48dd67bf"
       url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_arm64"
-      binary "mimiops-mcp_linux_arm64", target: "bin/mimiops-mcp"
+      binary "mimiops-mcp_linux_arm64", target: "mimiops-mcp"
+    end
+    on_intel do
+      sha256 "5329ae8a65031dc6c4fda321a891ed8df848d90831284e197a69c83a752e0d95"
+      url "https://github.com/sergelogvinov/mimiops-mcp/releases/download/v#{version}/mimiops-mcp_linux_amd64"
+      binary "mimiops-mcp_linux_amd64", target: "mimiops-mcp"
     end
   end
 
@@ -47,5 +46,4 @@ cask "mimiops-mcp" do
   end
 
   # No zap stanza required
-
 end
