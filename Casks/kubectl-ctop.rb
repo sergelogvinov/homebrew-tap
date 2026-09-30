@@ -4,24 +4,24 @@ cask "kubectl-ctop" do
 
   on_macos do
     on_arm do
-      sha256 "ffec9980ecf80cfc2771f4f4620e0dbbe47f7fe3d2c4b415b6d8d5f6945566f3"
+      sha256 "8422bd9740fbb7aeaaebef0b8e6f00dd71f8408bd44b5ca7268ff9af6e64afea"
       url "https://github.com/sergelogvinov/kubernetes-custom-metrics/releases/download/v#{version}/kubectl-ctop_darwin_arm64"
       binary "kubectl-ctop_darwin_arm64", target: "kubectl-ctop"
     end
     on_intel do
-      sha256 "625a4170b833dd2483dd011861b56ad496891a29ed87b28f8134259f430be52a"
+      sha256 "04f76a15b011783553b1ccf168da84a02d026f4c5317edc95acde479d25e7e3e"
       url "https://github.com/sergelogvinov/kubernetes-custom-metrics/releases/download/v#{version}/kubectl-ctop_darwin_amd64"
       binary "kubectl-ctop_darwin_amd64", target: "kubectl-ctop"
     end
   end
   on_linux do
     on_arm do
-      sha256 "3ec64e7ac9e455779a465bf961ff623a138eb4d7af0019479ba82af757a88a3e"
+      sha256 "a09a79be3321dde872529fa4a6b0a7fed79791ef2fbef317fccffd65f79174c3"
       url "https://github.com/sergelogvinov/kubernetes-custom-metrics/releases/download/v#{version}/kubectl-ctop_linux_arm64"
       binary "kubectl-ctop_linux_arm64", target: "kubectl-ctop"
     end
     on_intel do
-      sha256 "636dc5219547ffca2f558f3bdfbc468aaa51e410a9de93442aeee3691d1196cb"
+      sha256 "41950514ee9892dcc32c8f7a1e5563bef2ea25d4db13864b6f04552fc8e4f196"
       url "https://github.com/sergelogvinov/kubernetes-custom-metrics/releases/download/v#{version}/kubectl-ctop_linux_amd64"
       binary "kubectl-ctop_linux_amd64", target: "kubectl-ctop"
     end
@@ -37,7 +37,7 @@ cask "kubectl-ctop" do
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/kubectl-ctop_darwin_#{arch}"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/kubectl-ctop"]
     end
   end
 
