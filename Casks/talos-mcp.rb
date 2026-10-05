@@ -2,28 +2,28 @@
 cask "talos-mcp" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     on_arm do
-      sha256 "f6649795241e9f3ba04454af2e1567ffe4407d0c259095a36d2d1f7070acf285"
+      sha256 "cb195379efdf948138c130ee5d4acb9df73b731a28d6907e60b66afe8c090d97"
       url "https://github.com/sergelogvinov/talos-mcp/releases/download/v#{version}/talos-mcp_darwin_arm64"
       binary "talos-mcp_darwin_arm64", target: "talos-mcp"
     end
     on_intel do
-      sha256 "f4434392eb0a8bcfadbd5c63c1ca3516894e4277570501da661d1c22ad0b45e0"
+      sha256 "43e2bfe1ddc2a2414d33b138163d6c10b6d8456515428e4a205fa329526d84ff"
       url "https://github.com/sergelogvinov/talos-mcp/releases/download/v#{version}/talos-mcp_darwin_amd64"
       binary "talos-mcp_darwin_amd64", target: "talos-mcp"
     end
   end
   on_linux do
     on_arm do
-      sha256 "ed47f3c3b261d0ca2d002d77da021cb742622c47f18d146da18482bba58165aa"
+      sha256 "e1a40fa785b87c4676ad40e16c547c8b9fef80737201bfcb48d2b29a4fe18320"
       url "https://github.com/sergelogvinov/talos-mcp/releases/download/v#{version}/talos-mcp_linux_arm64"
       binary "talos-mcp_linux_arm64", target: "talos-mcp"
     end
     on_intel do
-      sha256 "470ce89bbcc026bcf01e0c8448868637cf3c9e9b75e0d06ca81adc32edbc5d80"
+      sha256 "f5cd5ade472caf011d6ceaae90ca3318168f430e82a332228bbaac9650c1fbc7"
       url "https://github.com/sergelogvinov/talos-mcp/releases/download/v#{version}/talos-mcp_linux_amd64"
       binary "talos-mcp_linux_amd64", target: "talos-mcp"
     end
