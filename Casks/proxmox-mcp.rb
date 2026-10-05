@@ -4,28 +4,28 @@ cask "proxmox-mcp" do
   os macos: "darwin", linux: "linux"
   binary "proxmox-mcp_#{os}_#{arch}", target: "proxmox-mcp"
 
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     on_arm do
-      sha256 "77e04c1c938a16b00e5655dd26216b08e181eb3cab61c7b3e14a9d19fba439eb"
+      sha256 "b1fb523abaf372ff71c9f0e451375e9ca689d67c92877a8c0d520f2ff28a8c1f"
       url "https://github.com/sergelogvinov/proxmox-mcp/releases/download/v#{version}/proxmox-mcp_darwin_arm64"
       binary "proxmox-mcp_darwin_arm64", target: "proxmox-mcp"
     end
     on_intel do
-      sha256 "34059c464cf57e631fbbd727ef6d7eafa50f67289e5059dde3ded65b04bae0cd"
+      sha256 "7bb0ad348b12fbc25b8531fb110a1ac43755fd49b1e12f63a54bc0b812b9dad2"
       url "https://github.com/sergelogvinov/proxmox-mcp/releases/download/v#{version}/proxmox-mcp_darwin_amd64"
       binary "proxmox-mcp_darwin_amd64", target: "proxmox-mcp"
     end
   end
   on_linux do
     on_arm do
-      sha256 "55f193297cc6822401ad1d31acc398bbe61d94e580941f3fc655c14e5fbd6319"
+      sha256 "278675e8cb7ed38c810eee422f080d7776e21009f2fe30e6a95b2a0be0a2c3d1"
       url "https://github.com/sergelogvinov/proxmox-mcp/releases/download/v#{version}/proxmox-mcp_linux_arm64"
       binary "proxmox-mcp_linux_arm64", target: "proxmox-mcp"
     end
     on_intel do
-      sha256 "3a0c105834829fcbcaa8a88fc566d82c7e8ff9acb5c7916184ba5334dd22138e"
+      sha256 "aae5bb1cbe766ae8cecf569cd32420dc79185364e65d7e20cdcb12f3ac8dd78f"
       url "https://github.com/sergelogvinov/proxmox-mcp/releases/download/v#{version}/proxmox-mcp_linux_amd64"
       binary "proxmox-mcp_linux_amd64", target: "proxmox-mcp"
     end
