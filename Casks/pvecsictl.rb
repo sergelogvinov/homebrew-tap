@@ -4,16 +4,16 @@ cask "pvecsictl" do
   os macos: "darwin", linux: "linux"
   binary "pvecsictl-#{os}-#{arch}", target: "pvecsictl"
 
-  version "0.20.0"
+  version "0.21.0"
 
   on_macos do
     on_intel do
-      sha256 "5dc0b26c269539e4688dbe0d9164e038b5a4853f7dda9be1a31af18aff862ede"
+      sha256 "d2c907b3821393f2bd2c74383a0ee328f8befaf8a5611332e59ef399911ffc18"
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-darwin-amd64"
       binary "pvecsictl-darwin-amd64", target: "pvecsictl-darwin-amd64"
     end
     on_arm do
-      sha256 "d665e56684af8b2e85e332c73352702f4017aa32b4bffc74ceae60b5e78ca95f"
+      sha256 "60cb8ac622ed3cfdd74a7dc02d6a3c0d70ab3d75f863dc5598c36693db002ff9"
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-darwin-arm64"
       binary "pvecsictl-darwin-arm64", target: "pvecsictl-darwin-arm64"
     end
@@ -21,12 +21,12 @@ cask "pvecsictl" do
 
   on_linux do
     on_intel do
-      sha256 "d0605c37b44bd734ab188adeb68b52157c25d070eaaea244f02ffc5f57eedc75"
+      sha256 "c89009abfcfab81cdc75579bb1a76378de42b2524c826e46ab3d23a09f4aa690"
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-linux-amd64"
       binary "pvecsictl-linux-amd64", target: "pvecsictl-linux-amd64"
     end
     on_arm do
-      sha256 "0e0432d8e8c0ec409e32a838034cf713c0b4cfd5c9ec325612dee9340816e6ca"
+      sha256 "a9576c72b9c5ef7f2928b8b568f57a6f5b9bbd94516436c80604d143e3616f99"
       url "https://github.com/sergelogvinov/proxmox-csi-plugin/releases/download/v#{version}/pvecsictl-linux-arm64"
       binary "pvecsictl-linux-arm64", target: "pvecsictl-linux-arm64"
     end
