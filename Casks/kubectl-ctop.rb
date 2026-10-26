@@ -2,28 +2,28 @@
 cask "kubectl-ctop" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     on_arm do
-      sha256 "8422bd9740fbb7aeaaebef0b8e6f00dd71f8408bd44b5ca7268ff9af6e64afea"
+      sha256 "839a7175353c589ad5cd322c5e8769e33cd7cea16fcdeacf9b70699abf16d8fd"
       url "https://github.com/sergelogvinov/kubernetes-custom-metrics/releases/download/v#{version}/kubectl-ctop_darwin_arm64"
       binary "kubectl-ctop_darwin_arm64", target: "kubectl-ctop"
     end
     on_intel do
-      sha256 "04f76a15b011783553b1ccf168da84a02d026f4c5317edc95acde479d25e7e3e"
+      sha256 "a2af91728184a678f2fd60486d0982aa8696ef73be50026fed3f948d3bd5195e"
       url "https://github.com/sergelogvinov/kubernetes-custom-metrics/releases/download/v#{version}/kubectl-ctop_darwin_amd64"
       binary "kubectl-ctop_darwin_amd64", target: "kubectl-ctop"
     end
   end
   on_linux do
     on_arm do
-      sha256 "a09a79be3321dde872529fa4a6b0a7fed79791ef2fbef317fccffd65f79174c3"
+      sha256 "9b2a6c35bde3191b36c8c1157d9fc0d4a23a7d1ce4ded83fe20c2aad0d82b796"
       url "https://github.com/sergelogvinov/kubernetes-custom-metrics/releases/download/v#{version}/kubectl-ctop_linux_arm64"
       binary "kubectl-ctop_linux_arm64", target: "kubectl-ctop"
     end
     on_intel do
-      sha256 "41950514ee9892dcc32c8f7a1e5563bef2ea25d4db13864b6f04552fc8e4f196"
+      sha256 "a633499d7f0f38dcde4767f5c7ed3186abb34b189040ea3f7b6318fec4ef4b3e"
       url "https://github.com/sergelogvinov/kubernetes-custom-metrics/releases/download/v#{version}/kubectl-ctop_linux_amd64"
       binary "kubectl-ctop_linux_amd64", target: "kubectl-ctop"
     end
